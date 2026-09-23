@@ -1,34 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>4.1.1</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
+
     <groupId>com.matthewmcroberts</groupId>
-    <artifactId>BookLibrary2</artifactId>
+    <artifactId>support-desk</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>BookLibrary2</name>
-    <description>BookLibrary2</description>
+    <name>SupportDesk</name>
+    <description>IT Support Desk and Ticket Management System</description>
     <url/>
+
     <licenses>
-        <license/>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/license/mit</url>
+            <distribution>repo</distribution>
+        </license>
     </licenses>
+
     <developers>
-        <developer/>
+        <developer>
+            <name>Matthew McRoberts</name>
+        </developer>
     </developers>
+
     <scm>
         <connection/>
         <developerConnection/>
         <tag/>
         <url/>
     </scm>
+
     <properties>
         <java.version>25</java.version>
     </properties>
+
     <dependencies>
 
         <!-- Spring Boot -->
