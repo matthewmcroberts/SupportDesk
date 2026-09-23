@@ -1,0 +1,32 @@
+package com.matthewmcroberts.booklibrary2.controller;
+
+import com.matthewmcroberts.booklibrary2.dto.AuthResponseDto;
+import com.matthewmcroberts.booklibrary2.dto.LoginRequestDto;
+import com.matthewmcroberts.booklibrary2.dto.RegisterUserRequestDto;
+import com.matthewmcroberts.booklibrary2.service.AuthService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/auth")
+@RequiredArgsConstructor
+public class AuthController {
+    private final AuthService authService;
+
+    @PostMapping("/register")
+    public ResponseEntity<Void> registerUser(@RequestBody RegisterUserRequestDto requestDto) {
+        authService.registerUser(requestDto.getUsername(), requestDto.getPassword());
+        return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<AuthResponseDto> login(@RequestBody LoginRequestDto requestDto) {
+        final AuthResponseDto responseDto = authService.login(requestDto.getUsername(), requestDto.getPassword());
+        return ResponseEntity.ok().body(responseDto);
+    }
+}
