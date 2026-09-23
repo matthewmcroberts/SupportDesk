@@ -1,4 +1,4 @@
-package com.matthewmcroberts.booklibrary2.exception;
+package com.matthewmcroberts.supportdesk.exception;
 
 public class EmailAlreadyExistsException extends RuntimeException {
     public EmailAlreadyExistsException(String message) {

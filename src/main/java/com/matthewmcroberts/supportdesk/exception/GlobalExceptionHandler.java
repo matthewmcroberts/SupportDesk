@@ -1,4 +1,4 @@
-package com.matthewmcroberts.booklibrary2.exception;
+package com.matthewmcroberts.supportdesk.exception;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

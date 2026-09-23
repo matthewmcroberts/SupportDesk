@@ -1,4 +1,4 @@
-package com.matthewmcroberts.booklibrary2;
+package com.matthewmcroberts.supportdesk;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

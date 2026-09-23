@@ -1,11 +1,10 @@
-package com.matthewmcroberts.booklibrary2.service;
+package com.matthewmcroberts.supportdesk.service;
 
-import com.matthewmcroberts.booklibrary2.dto.AuthResponseDto;
-import com.matthewmcroberts.booklibrary2.exception.EmailAlreadyExistsException;
-import com.matthewmcroberts.booklibrary2.exception.UsernameAlreadyExistsException;
-import com.matthewmcroberts.booklibrary2.model.User;
-import com.matthewmcroberts.booklibrary2.repository.UserRepository;
-import com.matthewmcroberts.booklibrary2.role.Role;
+import com.matthewmcroberts.supportdesk.dto.AuthResponseDto;
+import com.matthewmcroberts.supportdesk.exception.UsernameAlreadyExistsException;
+import com.matthewmcroberts.supportdesk.model.User;
+import com.matthewmcroberts.supportdesk.repository.UserRepository;
+import com.matthewmcroberts.supportdesk.role.Role;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;

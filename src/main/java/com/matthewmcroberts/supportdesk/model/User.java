@@ -1,6 +1,6 @@
-package com.matthewmcroberts.booklibrary2.model;
+package com.matthewmcroberts.supportdesk.model;
 
-import com.matthewmcroberts.booklibrary2.role.Role;
+import com.matthewmcroberts.supportdesk.role.Role;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

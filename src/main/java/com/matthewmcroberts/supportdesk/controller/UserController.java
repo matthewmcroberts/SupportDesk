@@ -1,4 +1,4 @@
-package com.matthewmcroberts.booklibrary2.controller;
+package com.matthewmcroberts.supportdesk.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

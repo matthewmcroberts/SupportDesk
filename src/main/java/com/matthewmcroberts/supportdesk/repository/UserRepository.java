@@ -1,6 +1,6 @@
-package com.matthewmcroberts.booklibrary2.repository;
+package com.matthewmcroberts.supportdesk.repository;
 
-import com.matthewmcroberts.booklibrary2.model.User;
+import com.matthewmcroberts.supportdesk.model.User;
 import lombok.NonNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 

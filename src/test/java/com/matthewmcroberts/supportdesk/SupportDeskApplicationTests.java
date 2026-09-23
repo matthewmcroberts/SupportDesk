@@ -1,4 +1,4 @@
-package com.matthewmcroberts.booklibrary2;
+package com.matthewmcroberts.supportdesk;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,7 +1,7 @@
-package com.matthewmcroberts.booklibrary2.service;
+package com.matthewmcroberts.supportdesk.service;
 
-import com.matthewmcroberts.booklibrary2.model.User;
-import com.matthewmcroberts.booklibrary2.repository.UserRepository;
+import com.matthewmcroberts.supportdesk.model.User;
+import com.matthewmcroberts.supportdesk.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.jspecify.annotations.NonNull;
 import org.springframework.security.core.userdetails.UserDetails;

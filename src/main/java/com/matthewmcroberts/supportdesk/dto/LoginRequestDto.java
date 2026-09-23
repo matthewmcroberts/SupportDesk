@@ -1,4 +1,4 @@
-package com.matthewmcroberts.booklibrary2.dto;
+package com.matthewmcroberts.supportdesk.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,9 +9,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class RegisterUserRequestDto {
+@NoArgsConstructor
+public class LoginRequestDto {
     private String username;
     private String password;
 }

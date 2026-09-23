@@ -1,4 +1,4 @@
-package com.matthewmcroberts.booklibrary2.exception;
+package com.matthewmcroberts.supportdesk.exception;
 
 public class UsernameAlreadyExistsException extends RuntimeException {
     public UsernameAlreadyExistsException(String message) {

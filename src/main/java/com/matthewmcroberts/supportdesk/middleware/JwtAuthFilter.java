@@ -1,6 +1,6 @@
-package com.matthewmcroberts.booklibrary2.middleware;
+package com.matthewmcroberts.supportdesk.middleware;
 
-import com.matthewmcroberts.booklibrary2.service.JwtService;
+import com.matthewmcroberts.supportdesk.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

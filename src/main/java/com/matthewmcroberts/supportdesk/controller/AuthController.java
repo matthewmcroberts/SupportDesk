@@ -1,9 +1,9 @@
-package com.matthewmcroberts.booklibrary2.controller;
+package com.matthewmcroberts.supportdesk.controller;
 
-import com.matthewmcroberts.booklibrary2.dto.AuthResponseDto;
-import com.matthewmcroberts.booklibrary2.dto.LoginRequestDto;
-import com.matthewmcroberts.booklibrary2.dto.RegisterUserRequestDto;
-import com.matthewmcroberts.booklibrary2.service.AuthService;
+import com.matthewmcroberts.supportdesk.dto.AuthResponseDto;
+import com.matthewmcroberts.supportdesk.dto.LoginRequestDto;
+import com.matthewmcroberts.supportdesk.dto.RegisterUserRequestDto;
+import com.matthewmcroberts.supportdesk.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

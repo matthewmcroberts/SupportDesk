@@ -1,6 +1,6 @@
-package com.matthewmcroberts.booklibrary2.config;
+package com.matthewmcroberts.supportdesk.config;
 
-import com.matthewmcroberts.booklibrary2.middleware.JwtAuthFilter;
+import com.matthewmcroberts.supportdesk.middleware.JwtAuthFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
