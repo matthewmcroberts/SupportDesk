@@ -1,8 +1,8 @@
 package com.matthewmcroberts.supportdesk.controller;
 
-import com.matthewmcroberts.supportdesk.dto.AuthResponseDto;
-import com.matthewmcroberts.supportdesk.dto.LoginRequestDto;
-import com.matthewmcroberts.supportdesk.dto.RegisterUserRequestDto;
+import com.matthewmcroberts.supportdesk.dto.response.AuthResponseDto;
+import com.matthewmcroberts.supportdesk.dto.request.LoginRequestDto;
+import com.matthewmcroberts.supportdesk.dto.request.RegisterUserRequestDto;
 import com.matthewmcroberts.supportdesk.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

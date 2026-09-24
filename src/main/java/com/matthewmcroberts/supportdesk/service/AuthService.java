@@ -1,11 +1,10 @@
 package com.matthewmcroberts.supportdesk.service;
 
-import com.matthewmcroberts.supportdesk.dto.AuthResponseDto;
+import com.matthewmcroberts.supportdesk.dto.response.AuthResponseDto;
 import com.matthewmcroberts.supportdesk.exception.EmailAlreadyExistsException;
-import com.matthewmcroberts.supportdesk.exception.UsernameAlreadyExistsException;
 import com.matthewmcroberts.supportdesk.model.User;
 import com.matthewmcroberts.supportdesk.repository.UserRepository;
-import com.matthewmcroberts.supportdesk.role.Role;
+import com.matthewmcroberts.supportdesk.types.Role;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;

@@ -1,6 +1,6 @@
 package com.matthewmcroberts.supportdesk.model;
 
-import com.matthewmcroberts.supportdesk.role.Role;
+import com.matthewmcroberts.supportdesk.types.Role;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

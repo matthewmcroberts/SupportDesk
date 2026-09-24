@@ -1,4 +1,4 @@
-package com.matthewmcroberts.supportdesk.dto;
+package com.matthewmcroberts.supportdesk.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

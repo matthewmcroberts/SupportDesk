@@ -1,4 +1,4 @@
-package com.matthewmcroberts.supportdesk.dto;
+package com.matthewmcroberts.supportdesk.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,7 +11,6 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class RegisterUserRequestDto {
-    private String email;
-    private String password;
+public class AuthResponseDto {
+    private String token;
 }
