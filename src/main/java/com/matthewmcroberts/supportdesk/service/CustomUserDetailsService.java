@@ -1,5 +1,6 @@
 package com.matthewmcroberts.supportdesk.service;
 
+import com.matthewmcroberts.supportdesk.exception.EmailNotFoundException;
 import com.matthewmcroberts.supportdesk.model.User;
 import com.matthewmcroberts.supportdesk.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -16,9 +17,9 @@ public class CustomUserDetailsService implements UserDetailsService {
 
 
     @Override
-    public @NonNull UserDetails loadUserByUsername(@NonNull final String username) throws UsernameNotFoundException {
-        final User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
+    public @NonNull UserDetails loadUserByUsername(@NonNull final String email) throws UsernameNotFoundException {
+        final User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new EmailNotFoundException("Email not found with email: " + email));
 
         return org.springframework.security.core.userdetails.User
                 .withUsername(user.getUsername())

@@ -35,7 +35,7 @@ public class User implements UserDetails {
     private long id;
 
     @Column(nullable = false, unique = true)
-    private String username;
+    private String email;
 
     @Column(nullable = false)
     private String password;
@@ -47,5 +47,10 @@ public class User implements UserDetails {
     @Override
     public @NonNull Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority("ROLE_" + this.role.name()));
+    }
+
+    @Override
+    public @NonNull String getUsername() {
+        return this.email;
     }
 }

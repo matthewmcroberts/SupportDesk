@@ -1,6 +1,7 @@
 package com.matthewmcroberts.supportdesk.service;
 
 import com.matthewmcroberts.supportdesk.dto.AuthResponseDto;
+import com.matthewmcroberts.supportdesk.exception.EmailAlreadyExistsException;
 import com.matthewmcroberts.supportdesk.exception.UsernameAlreadyExistsException;
 import com.matthewmcroberts.supportdesk.model.User;
 import com.matthewmcroberts.supportdesk.repository.UserRepository;
@@ -28,14 +29,14 @@ public class AuthService {
     private final UserDetailsService userDetailsService;
     private final JwtService jwtService;
 
-    public void registerUser(@NonNull final String username, @NonNull final String password) {
-        final Optional<User> usernameOpt = userRepository.findByUsername(username);
-        if (usernameOpt.isPresent()) {
-            throw new UsernameAlreadyExistsException("Username already exists");
+    public void registerUser(@NonNull final String email, @NonNull final String password) {
+        final Optional<User> emailOpt = userRepository.findByEmail(email);
+        if (emailOpt.isPresent()) {
+            throw new EmailAlreadyExistsException("Email already exists");
         }
 
         final User user = User.builder()
-                .username(username)
+                .email(email)
                 .password(passwordEncoder.encode(password))
                 .role(Role.USER)
                 .build();
@@ -43,10 +44,10 @@ public class AuthService {
         userRepository.save(user);
     }
 
-    public AuthResponseDto login(@NonNull final String username, @NonNull final String password) {
-        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+    public AuthResponseDto login(@NonNull final String email, @NonNull final String password) {
+        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(email, password));
 
-        final UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+        final UserDetails userDetails = userDetailsService.loadUserByUsername(email);
 
         return AuthResponseDto.builder()
                 .token(jwtService.generateToken(userDetails))

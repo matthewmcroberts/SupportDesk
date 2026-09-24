@@ -20,13 +20,13 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity<Void> registerUser(@RequestBody RegisterUserRequestDto requestDto) {
-        authService.registerUser(requestDto.getUsername(), requestDto.getPassword());
+        authService.registerUser(requestDto.getEmail(), requestDto.getPassword());
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @PostMapping("/login")
     public ResponseEntity<AuthResponseDto> login(@RequestBody LoginRequestDto requestDto) {
-        final AuthResponseDto responseDto = authService.login(requestDto.getUsername(), requestDto.getPassword());
+        final AuthResponseDto responseDto = authService.login(requestDto.getEmail(), requestDto.getPassword());
         return ResponseEntity.ok().body(responseDto);
     }
 }
